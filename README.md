@@ -2,7 +2,7 @@
 
 
 ## What is this?
-- A chatbot thats interacting with a Generative AI backend.
+- A chatbot thats interacting with a Generative AI backend. In this project, contents from a text document is embedded in a picone db. These vectors are fed as context to the LLM to respond to the user queries.
 
 
 ## To run this project in your local workspace:
