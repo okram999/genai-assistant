@@ -1,8 +1,8 @@
-# GenAI-Assistant
+# GenAI-Assistant-demo
 
 
-## What is all about
-- A chatbot thats interacting with a backend build using Generative AI
+## What is this?
+- A chatbot thats interacting with a Generative AI backend.
 
 
 ## To run this project in your local workspace:
