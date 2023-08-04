@@ -10,6 +10,8 @@ pinecone-client = "*"
 python-dotenv = "*"
 openai = "*"
 tiktoken = "*"
+streamlit = "*"
+streamlit-chat = "*"
 
 [dev-packages]
 
