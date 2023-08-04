@@ -1,6 +1,11 @@
-# GenAI TEST Project
+# GenAI-Assistant
 
-To run this project in your local workspace:
+
+## What is all about
+- A chatbot thats interacting with a backend build using Generative AI
+
+
+## To run this project in your local workspace:
  1. Populate the API Keys in .env file at the projects root
  2. Start the virtual env `pipenv shell`
  3. Install the required project packages, `pipenv install`
