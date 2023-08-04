@@ -2,7 +2,7 @@
 
 
 ## What is this?
-- A chatbot thats interacting with a Generative AI backend. In this project, contents from a text document (blog1.txt) is embedded in a picone db. These vectors are fed as context to the LLM to respond to the user queries.
+- A chatbot thats interacting with a Generative AI backend. In this project, contents from a text document (blog1.txt) is embedded in a vector store (Pinecone db). These vectors are fed as context to the LLM by LangChain to respond to the user queries.
 
 
 ## To run this project in your local workspace:
