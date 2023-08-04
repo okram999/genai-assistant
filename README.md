@@ -11,6 +11,7 @@
  3. Install the required project packages, `pipenv install`
  4. Run the app, e.g. `streamlit run /Users/niris/Documents/mini-project/blogs/main.py`
 
+<img width="1089" alt="chat-screen" src="https://github.com/okram999/genai-assistant/assets/10067711/21794718-17f8-47cf-a173-c032bca18d09">
 
 
 
