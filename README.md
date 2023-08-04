@@ -12,3 +12,7 @@
  4. Run the app, e.g. `streamlit run /Users/niris/Documents/mini-project/blogs/main.py`
 
 
+
+
+https://github.com/okram999/genai-assistant/assets/10067711/5bddf3df-a520-487b-a9c2-e2544e6f0736
+
