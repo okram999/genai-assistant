@@ -1,56 +1,12 @@
 import os
-
-from langchain.document_loaders import TextLoader
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import Pinecone
-import pinecone
-from langchain import VectorDBQA, OpenAI
+from lib.backend import ask_question
 import streamlit as st
 from streamlit_chat import message
 from dotenv import load_dotenv
 
 load_dotenv()
 
-
-pinecone.init(
-    api_key=os.environ.get("PINECONE_API_KEY"),
-    environment=os.environ.get("PINECONE_ENVIRONMENT_REGION"),
-)
-
-
-# UI code below
-
 st.header("XYZ Research - Generative AI Assistant")
-
-
-# backend code below
-
-if __name__ == "__main__":
-    loader = TextLoader("/Users/niris/Documents/mini-project/blogs/blog1.txt")
-    document = loader.load()
-
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
-
-    text = text_splitter.split_documents(document)
-
-    embeddings = OpenAIEmbeddings(openai_api_key=os.environ.get("OPENAI_API_KEY"))
-
-    docsearch = Pinecone.from_documents(
-        text, embeddings, index_name="blogs-embedding-vectors"
-    )
-
-    qa = VectorDBQA.from_chain_type(
-        llm=OpenAI(),
-        vectorstore=docsearch,
-        chain_type="stuff"
-        # return_source_documents=True
-    )
-
-    # query = "what is life?"
-
-    # result = qa({"query": query})
-    # print(result)
 
 if (
     "chat_answers_history" not in st.session_state
@@ -68,11 +24,12 @@ prompt = st.text_input(
 
 if prompt:
     with st.spinner("Asking AI..."):
-        generated_response = qa({"query": prompt})
-        resp = generated_response["result"]
-        # st.session_state["chat_answers_history"].append(resp)
+        generated_response = ask_question(
+            query=prompt, chat_history=st.session_state["chat_history"]
+        )
+        resp = generated_response["answer"]
 
-        st.session_state.chat_history.append((prompt, generated_response["result"]))
+        st.session_state.chat_history.append((prompt, generated_response["answer"]))
         st.session_state.user_prompt_history.append(prompt)
         st.session_state.chat_answers_history.append(resp)
 
