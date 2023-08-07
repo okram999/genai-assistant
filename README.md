@@ -37,7 +37,8 @@
     }
     ```
 
-<img width="500" alt="chat-screen" src="https://github.com/okram999/genai-assistant/assets/10067711/21794718-17f8-47cf-a173-c032bca18d09">
+
+![Screenshot 2023-08-07 at 12 58 44](https://github.com/okram999/genai-assistant/assets/10067711/387e8f47-781e-401a-8a87-95872fc6dfbd)
 
 
 
@@ -47,5 +48,9 @@
 
 
 
-https://github.com/okram999/genai-assistant/assets/10067711/c7b44934-f097-414b-b31b-3b1f9e77f087
+https://github.com/okram999/genai-assistant/assets/10067711/728ac601-7035-43e9-b773-be7dbc511db5
+
+
+
+
 
