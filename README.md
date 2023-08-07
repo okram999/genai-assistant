@@ -19,5 +19,7 @@
 
 ### Demo
 
-https://github.com/okram999/genai-assistant/assets/10067711/5bddf3df-a520-487b-a9c2-e2544e6f0736
+
+
+https://github.com/okram999/genai-assistant/assets/10067711/c7b44934-f097-414b-b31b-3b1f9e77f087
 
