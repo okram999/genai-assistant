@@ -14,7 +14,28 @@
     ```
  3. Start the virtual env `pipenv shell`
  4. Install the required project packages, `pipenv install`
- 5. Run the app, e.g. `streamlit run /Users/niris/Documents/mini-project/blogs/main.py`
+ 5. Run the app, e.g. `streamlit run main.py` or set up the `.vscode/launch.json`. e.g.
+    ```
+    {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "streamlit",
+            "type": "python",
+            "request": "launch",
+            "program": "<path_to_streamlit_binary>",
+            "args": [
+                "run",
+                "main.py"
+            ],
+            "justMyCode": true
+        }
+     ]
+    }
+    ```
 
 <img width="500" alt="chat-screen" src="https://github.com/okram999/genai-assistant/assets/10067711/21794718-17f8-47cf-a173-c032bca18d09">
 
