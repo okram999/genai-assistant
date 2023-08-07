@@ -13,7 +13,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 INDEX_NAME = "blogs-embedding-vectors"
-DATA_FILE = "/Users/niris/Documents/mini-project/blogs/blog1.txt"
+DATA_FILE = "/Users/niris/Documents/mini-project/blogs/bloodwork.txt"
 
 pinecone.init(
     api_key=os.environ.get("PINECONE_API_KEY"),
@@ -25,6 +25,7 @@ def load_data():
     loader = TextLoader(DATA_FILE)
     document = loader.load()
     text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
+    text = text_splitter.split_documents(document)
     embeddings = OpenAIEmbeddings(openai_api_key=os.environ.get("OPENAI_API_KEY"))
     docsearch = Pinecone.from_documents(text, embeddings, index_name=INDEX_NAME)
     print("Data loaded to Pinecone")
