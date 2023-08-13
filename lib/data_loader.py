@@ -13,7 +13,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 INDEX_NAME = "blogs-embedding-vectors"
-# DATA_FILE = "/Users/niris/Documents/mini-project/blogs/bloodwork.txt"
 
 pinecone.init(
     api_key=os.environ.get("PINECONE_API_KEY"),
