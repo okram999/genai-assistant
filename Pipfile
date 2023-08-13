@@ -12,6 +12,8 @@ openai = "*"
 tiktoken = "*"
 streamlit = "*"
 streamlit-chat = "*"
+boto3 = "*"
+unstructured = "*"
 
 [dev-packages]
 
