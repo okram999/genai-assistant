@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
 def create_sources_string(source_urls: Set[str]) -> str:
     if not source_urls:
         return ""
@@ -16,7 +17,6 @@ def create_sources_string(source_urls: Set[str]) -> str:
     for i, source in enumerate(sources_list):
         sources_string += f"{i+1}. {source}\n"
     return sources_string
-
 
 
 st.header("My Research - Generative AI Assistant")
@@ -42,15 +42,19 @@ if prompt:
 
         # hard code metadata prefix to trim the source path.
         # This needs to be fixed. use it as a variable!
-          
+
         sources = set(
-            [doc.metadata["source"].lstrip('/var/folders/2c/zg0dqdp129v0bz0s7l00k3vm0000gr/T/tmp3f34f9og/') for doc in generated_response["source_documents"]]
+            [
+                doc.metadata["source"].lstrip(
+                    "/var/folders/2c/zg0dqdp129v0bz0s7l00k3vm0000gr/T/tmp3f34f9og/"
+                )
+                for doc in generated_response["source_documents"]
+            ]
         )
-        
+
         formatted_response = (
             f"{generated_response['answer']} \n\n {create_sources_string(sources)}"
         )
-
 
         st.session_state.chat_history.append((prompt, generated_response["answer"]))
         st.session_state.user_prompt_history.append(prompt)

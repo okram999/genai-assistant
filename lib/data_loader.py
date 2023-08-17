@@ -23,7 +23,9 @@ pinecone.init(
 def load_data():
     loader = S3DirectoryLoader("genaiassistant", prefix="all_data/")
     document = loader.load()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=0, separators=[" ", ",", "\n"])
+    text_splitter = RecursiveCharacterTextSplitter(
+        chunk_size=1000, chunk_overlap=0, separators=[" ", ",", "\n"]
+    )
     text = text_splitter.split_documents(document)
     embeddings = OpenAIEmbeddings(openai_api_key=os.environ.get("OPENAI_API_KEY"))
     docsearch = Pinecone.from_documents(text, embeddings, index_name=INDEX_NAME)
