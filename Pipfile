@@ -13,7 +13,7 @@ tiktoken = "*"
 streamlit = "*"
 streamlit-chat = "*"
 boto3 = "*"
-unstructured = "*"
+unstructured = "==0.7.12"
 
 [dev-packages]
 
