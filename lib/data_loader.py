@@ -13,6 +13,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 INDEX_NAME = "blogs-embedding-vectors"
+S3_BUCKET_NAME = "genaiassistant"
+S3_PREFIX = "all_data/"
 
 pinecone.init(
     api_key=os.environ.get("PINECONE_API_KEY"),
@@ -21,7 +23,7 @@ pinecone.init(
 
 
 def load_data():
-    loader = S3DirectoryLoader("genaiassistant", prefix="all_data/")
+    loader = S3DirectoryLoader(S3_BUCKET_NAME, prefix=S3_PREFIX)
     document = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000, chunk_overlap=0, separators=[" ", ",", "\n"]
