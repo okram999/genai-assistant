@@ -40,9 +40,13 @@ if prompt:
             query=prompt, chat_history=st.session_state["chat_history"]
         )
 
+        # hard code metadata prefix to trim the source path.
+        # This needs to be fixed. use it as a variable!
+          
         sources = set(
-            [doc.metadata["source"] for doc in generated_response["source_documents"]]
+            [doc.metadata["source"].lstrip('/var/folders/2c/zg0dqdp129v0bz0s7l00k3vm0000gr/T/tmp3f34f9og/') for doc in generated_response["source_documents"]]
         )
+        
         formatted_response = (
             f"{generated_response['answer']} \n\n {create_sources_string(sources)}"
         )
