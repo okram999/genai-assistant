@@ -2,7 +2,7 @@
 
 
 ## What is this?
-- A chatbot thats interacting with a Generative AI backend. In this project, multiple data files of various types (.pdf/.csv/.txt) in `Amazon S3` is embedded in a vector store (Pinecone db). These vectors are fed as context to the LLM (`GPT-3`) by LangChain to respond to the user queries.
+- A chatbot thats interacting with a Generative AI backend. In this project, multiple data files of various types (.pdf/.csv/.txt) in `Amazon S3` is embedded in a vector store (Pinecone db). These vectors are fed as context to an LLM in Amazon Bedrock. LangChain is the framework used in this project.
 
 
 ## To run this project in your local workspace:
