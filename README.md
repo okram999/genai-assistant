@@ -13,6 +13,9 @@
     PINECONE_ENVIRONMENT_REGION=us-west4-gcp-xxx
     AWS_ACCESS_KEY_ID=
     AWS_SECRET_ACCESS_KEY=
+    BWB_PROFILE_NAME=''
+    BWB_REGION_NAME=''
+
     ```
  3. Start the virtual env `pipenv shell`
  4. Install the required project packages, `pipenv install`
