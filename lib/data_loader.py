@@ -23,7 +23,7 @@ pinecone.init(
 
 
 def load_data():
-    loader = S3DirectoryLoader(S3_BUCKET_NAME, prefix=S3_PREFIX)
+    loader = S3DirectoryLoader(S3_BUCKET_NAME, prefix=S3_PREFIX) # # https://github.com/langchain-ai/langchain/issues/6535
     document = loader.load()
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1000, chunk_overlap=0, separators=[" ", ",", "\n"]
